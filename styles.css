@@ -8,19 +8,19 @@ body {
 header {
   background: url('assets/fondo.jpg') no-repeat center center/cover;
   height: 100vh;
-  color: rgb(255, 250, 236);
+  color: rgb(0, 0, 0);
   text-align: center;
   padding-top: 100px;
 }
 
 .logo {
-  width: 100px;
-  margin-top: 20px;
+  width: 200px;
+  margin-top: 40px;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  margin-top: -10px;
+  font-size: 2rem;
+  margin-top: 32px;
 }
 
 .menu, #about, #contact {
