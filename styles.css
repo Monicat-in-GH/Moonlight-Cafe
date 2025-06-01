@@ -24,14 +24,14 @@ header {
 }
 
 .menu, #about, #contact {
-  padding: 40px 20px;
+  padding: 600px 300px;
   max-width: 1000px;
   margin: auto;
 }
 
 .menu-items {
   display: flex;
-  gap: 20px;
+  gap: 50px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -41,14 +41,14 @@ header {
 }
 
 .menu-item img {
-  width: 200px;
+  width: 600px;
   border-radius: 8px;
 }
 
 .gallery img {
-  width: 200px;
-  margin: 10px;
-  border-radius: 10px;
+  width: 500px;
+  margin: 50px;
+  border-radius: 50px;
 }
 
 
