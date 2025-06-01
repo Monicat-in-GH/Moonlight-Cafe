@@ -9,7 +9,7 @@ body {
 header {
   background: url('assets/fondo.jpg') no-repeat center center/cover;
   height: 100vh;
-  color: rgb(255, 250, 236);
+  color: rgb(145, 12, 76);
   text-align: center;
   display: flex;
   flex-direction: column;
