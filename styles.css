@@ -82,7 +82,7 @@ section {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 400px;
+    width: 300px; /* Ajustado para acomodar la imagen más grande */
 }
 
 .menu-item:hover {
@@ -91,8 +91,8 @@ section {
 }
 
 .menu-item img {
-    width: 150%;
-    height: 250px;
+    width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
+    height: 250px; /* Aumentamos la altura de la imagen */
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -101,11 +101,11 @@ section {
 
 .menu-item p {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em; /* Ajustado para que el texto no sea demasiado grande y se ajuste mejor */
     color: #5a4b41;
 }
 
-/* Nuestra Historia y Horarios/Ubicación */
+/* Nuestra Historia y Horarios y Ubicación */
 #about p,
 #contact p {
     font-size: 1.1em;
@@ -161,7 +161,7 @@ footer {
 
     .menu-item {
         width: 100%;
-        max-width: 300px;
+        max-width: 300px; /* Asegura que no se estire demasiado en pantallas pequeñas */
     }
 
     #gallery img {
@@ -178,5 +178,9 @@ footer {
 
     section {
         padding: 30px 15px;
+    }
+
+    .menu-item p {
+        font-size: 1.3em; /* Ajuste para móviles */
     }
 }
