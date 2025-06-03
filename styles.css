@@ -1,116 +1,182 @@
-/* styles.css */
-
-:root {
-  --primary: #5C4033;
-  --secondary: #A1866F;
-  --background: #F8F1E7;
-  --text: #2F2F2F;
-  --accent: #D9BFA9;
-  --font: 'Segoe UI', sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Base y Tipografía */
 body {
-  font-family: var(--font);
-  background-color: var(--background);
-  color: var(--text);
-  line-height: 1.6;
-  padding: 0 1rem;
+    font-family: 'Georgia', serif; /* Una fuente clásica y cálida */
+    margin: 0;
+    line-height: 1.6;
+    color: #333; /* Un color de texto oscuro pero suave */
+    background-color: #f8f5ed; /* Un color de fondo crema suave */
 }
 
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Una fuente elegante para los títulos */
+    color: #5a4b41; /* Un marrón oscuro para los títulos */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Encabezado */
 header {
-  background-color: var(--primary);
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+    background-color: #7b6a5e; /* Un tono de marrón más oscuro para el encabezado */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.logo {
-  width: 100px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
+header .logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Para hacer el logo redondo */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #fff; /* Un borde blanco alrededor del logo */
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+    font-size: 3.5em;
+    margin-bottom: 5px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.subtitle {
-  font-style: italic;
-  font-size: 1.2rem;
+header .subtitle {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #f0e6d2; /* Un color más claro para el subtítulo */
 }
 
+/* Secciones Generales */
 section {
-  max-width: 960px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+    padding: 60px 20px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 30px auto;
 }
 
-h2 {
-  font-size: 2rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-  text-align: center;
+/* Menú */
+.menu h2 {
+    color: #964B00; /* Un tono de marrón más cálido para el menú */
 }
 
 .menu-items {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Espacio entre los elementos del menú */
+    margin-top: 40px;
 }
 
 .menu-item {
-  background-color: white;
-  border: 1px solid var(--accent);
-  border-radius: 10px;
-  padding: 1rem;
-  width: 200px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+    background-color: #f0e6d2; /* Un fondo claro para cada item del menú */
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
 }
 
 .menu-item:hover {
-  transform: scale(1.05);
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .menu-item img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
 }
 
+.menu-item p {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #5a4b41;
+}
+
+/* Nuestra Historia y Horarios/Ubicación */
 #about p,
 #contact p {
-  text-align: center;
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto 1rem;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
 }
 
+#about h2,
+#contact h2 {
+    color: #7b6a5e;
+}
+
+/* Galería */
 #gallery {
-  text-align: center;
+    text-align: center;
+}
+
+#gallery h2 {
+    color: #964B00;
 }
 
 #gallery img {
-  width: 300px;
-  max-width: 90%;
-  margin: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 30%; /* Ajusta el tamaño de las imágenes */
+    max-width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    border: 2px solid #ddd;
 }
 
+#gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Pie de Página */
 footer {
-  text-align: center;
-  background-color: var(--primary);
-  color: white;
-  padding: 1rem;
-  margin-top: 3rem;
+    background-color: #5a4b41; /* Un color oscuro para el pie de página */
+    color: #f0e6d2;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .menu-item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #gallery img {
+        width: 80%;
+        margin: 15px auto;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
 }
