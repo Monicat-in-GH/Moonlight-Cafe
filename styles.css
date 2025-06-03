@@ -1,207 +1,207 @@
 /* Base y Tipografía */
 
 body {
-    font-family: 'Georgia', serif;
-    margin: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f5ed;
-    font-size: 1.4em; /* Tamaño base moderado */
+    font-family: 'Georgia', serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f5ed;
+    font-size: 0.933em; /* Tamaño base reducido 1.5 veces */
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: #5a4b41;
-    text-align: center;
-    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    color: #5a4b41;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
 }
 
 /* Encabezado */
 
 header {
-    background-color: #7b6a5e;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #7b6a5e;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header .logo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid #fff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #fff;
 }
 
 header h1 {
-    font-size: 2em;
-    margin-bottom: 5px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header .subtitle {
-    font-size: 1.2em;
-    font-style: italic;
-    color: #f0e6d2;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #f0e6d2;
 }
 
 /* Secciones Generales */
 
 section {
-    padding: 60px 20px;
-    margin-bottom: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
-    margin: 30px auto;
+    padding: 60px 20px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 30px auto;
 }
 
 /* Menú */
 
 .menu h2 {
-    color: #964B00;
+    color: #964B00;
 }
 
 .menu-items {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .menu-item {
-    background-color: #f0e6d2;
-    border-radius: 8px;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 400px;
+    background-color: #f0e6d2;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 400px;
 }
 
 .menu-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .menu-item img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
 }
 
 .menu-item p {
-    font-weight: bold;
-    font-size: 1em;
-    color: #5a4b41;
+    font-weight: bold;
+    font-size: 1em;
+    color: #5a4b41;
 }
 
 /* Nuestra Historia y Horarios y Ubicación */
 
 #about p,
 #contact p {
-    font-size: 1.5em;
-    line-height: 1.8;
-    color: #555;
+    font-size: 1.5em;
+    line-height: 1.8;
+    color: #555;
 }
 
 #about h2,
 #contact h2 {
-    color: #7b6a5e;
+    color: #7b6a5e;
 }
 
 /* Galería */
 
 #gallery {
-    text-align: center;
+    text-align: center;
 }
 
 #gallery h2 {
-    color: #964B00;
+    color: #964B00;
 }
 
 #gallery img {
-    width: 30%;
-    max-width: 350px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-    border: 2px solid #ddd;
+    width: 30%;
+    max-width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    border: 2px solid #ddd;
 }
 
 #gallery img:hover {
-    transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 /* Pie de Página */
 
 footer {
-    background-color: #5a4b41;
-    color: #f0e6d2;
-    text-align: center;
-    padding: 25px 20px;
-    margin-top: 50px;
-    font-size: 0.9em;
+    background-color: #5a4b41;
+    color: #f0e6d2;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 0.9em;
 }
 
 /* Media Queries para Responsividad */
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.6em;
-    }
+    header h1 {
+        font-size: 1.6em;
+    }
 
-    .menu-item {
-        width: 100%;
-        max-width: 400px;
-    }
+    .menu-item {
+        width: 100%;
+        max-width: 400px;
+    }
 
-    .menu-item img {
-        height: 350px;
-    }
+    .menu-item img {
+        height: 350px;
+    }
 
-    #gallery img {
-        width: 80%;
-        margin: 15px auto;
-        display: block;
-    }
+    #gallery img {
+        width: 80%;
+        margin: 15px auto;
+        display: block;
+    }
 
-    .menu-item p {
-        font-size: 0.95em;
-    }
+    .menu-item p {
+        font-size: 0.95em;
+    }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
+    header h1 {
+        font-size: 1.5em;
+    }
 
-    section {
-        padding: 30px 15px;
-    }
+    section {
+        padding: 30px 15px;
+    }
 
-    .menu-item p {
-        font-size: 1.3em;
-    }
+    .menu-item p {
+        font-size: 1.3em;
+    }
 
-    .menu-item img {
-        height: 250px;
-    }
+    .menu-item img {
+        height: 250px;
+    }
 }
