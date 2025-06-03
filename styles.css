@@ -1,294 +1,146 @@
-/* Importar fuentes de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
-
-:root {
-    /* Paleta de colores */
-    --color-cafe-oscuro: #4A2B1D; /* Café oscuro */
-    --color-cafe-medio: #6F4E37; /* Café más cálido */
-    --color-beige: #F5E8C7; /* Beige cremoso */
-    --color-crema: #FFF8E1; /* Crema muy claro */
-    --color-dorado: #B8860B; /* Toque dorado para detalles */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Estilos generales del cuerpo */
 body {
-    font-family: 'Open Sans', sans-serif; /* Fuente general para el cuerpo */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: var(--color-crema); /* Fondo suave */
-    color: var(--color-cafe-oscuro); /* Texto principal café oscuro */
-    text-align: center; /* Centrar todo el contenido por defecto */
+  font-family: 'Georgia', serif;
+  background-color: #f9f5f0;
+  color: #3e2c23;
+  line-height: 1.6;
+  padding: 0 20px;
 }
 
-/* Encabezados generales */
-h1, h2 {
-    font-family: 'Playfair Display', serif; /* Fuente elegante para títulos */
-    color: var(--color-cafe-medio);
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 2.2em;
-    padding-top: 40px;
-    padding-bottom: 20px;
-    position: relative;
-    display: inline-block; /* Para centrar el underline */
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    width: 60%;
-    height: 3px;
-    background-color: var(--color-dorado);
-    left: 20%;
-    bottom: 5px;
-    border-radius: 5px;
-}
-
-/* Estilos del encabezado */
+/* Encabezado */
 header {
-    background-color: var(--color-beige);
-    padding: 60px 20px;
-    border-bottom: 5px solid var(--color-cafe-medio);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden; /* Para el efecto de fondo */
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-    animation: rotateBackground 20s linear infinite;
-}
-
-@keyframes rotateBackground {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  text-align: center;
+  background-color: #d7ccc8;
+  padding: 40px 20px;
+  border-bottom: 5px solid #a1887f;
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--color-dorado);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+  max-width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.logo:hover {
-    transform: scale(1.05);
+h1 {
+  font-size: 3em;
+  margin-top: 20px;
+  font-family: 'Playfair Display', serif;
 }
 
 .subtitle {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5em;
-    color: var(--color-cafe-medio);
-    font-style: italic;
-    margin-top: 15px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  font-size: 1.2em;
+  font-style: italic;
+  color: #5d4037;
+  margin-top: 10px;
 }
 
-/* Secciones generales */
-section {
-    padding: 60px 20px;
-    margin-bottom: 30px;
-    background-color: var(--color-crema);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    max-width: 1000px; /* Ancho máximo para el contenido */
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid var(--color-beige); /* Borde suave */
-}
-
-/* Estilos del menú */
+/* Sección Menú */
 .menu {
-    background-color: var(--color-beige);
+  background-color: #efebe9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #4e342e;
 }
 
 .menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px; /* Espacio entre los elementos del menú */
-    margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .menu-item {
-    background-color: var(--color-crema);
-    border: 3px solid var(--color-cafe-medio);
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    width: 280px; /* Ancho fijo para cada item */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Para que la imagen no se salga */
-}
-
-.menu-item:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  text-align: center;
 }
 
 .menu-item img {
-    width: 100%; /* Las imágenes serán grandes y ocuparán todo el ancho del contenedor */
-    height: 200px; /* Altura fija para las imágenes del menú */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
-    border-radius: 10px;
-    margin-bottom: 20px;
-    border: 2px solid var(--color-dorado);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.menu-item img:hover {
-    transform: scale(1.03);
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
 }
 
 .menu-item p {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8em;
-    color: var(--color-cafe-oscuro);
-    font-weight: bold;
-    margin: 0;
-    letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
-/* Estilos de Nuestra Historia y Horarios/Ubicación */
-#about p, #contact p {
-    font-size: 1.2em;
-    color: var(--color-cafe-oscuro);
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* Sección Historia */
+#about {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f3e5ab;
 }
 
-#contact p {
-    font-weight: 600;
-    margin-bottom: 10px;
+#about h2 {
+  font-size: 2.5em;
+  color: #6d4c41;
+  margin-bottom: 20px;
 }
 
-/* Estilos de la Galería */
+#about p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1em;
+  color: #4e342e;
+}
+
+/* Contacto */
+#contact {
+  background-color: #d7ccc8;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.3em;
+  margin-bottom: 15px;
+  color: #5d4037;
+}
+
+/* Galería */
 #gallery {
-    background-color: var(--color-beige);
-    padding-bottom: 80px; /* Más espacio abajo para el footer */
+  background-color: #efebe9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#gallery h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #4e342e;
 }
 
 #gallery img {
-    width: 80%; /* Las imágenes serán grandes */
-    max-width: 700px; /* Un máximo para que no sean excesivamente grandes en pantallas grandes */
-    height: auto; /* Mantener la proporción */
-    display: block; /* Para centrar con margin auto */
-    margin: 30px auto; /* Centradas y con buen espacio */
-    border: 5px solid var(--color-cafe-medio);
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 90%;
+  max-height: 400px;
+  margin: 15px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  display: block;
 }
 
-#gallery img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Pie de página */
+/* Footer */
 footer {
-    background-color: var(--color-cafe-oscuro);
-    color: var(--color-crema);
-    padding: 30px 20px;
-    font-size: 0.9em;
-    border-top: 5px solid var(--color-cafe-medio);
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #a1887f;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+  font-size: 0.9em;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* Animaciones y Efectos Adicionales */
-/* Efecto de desvanecimiento al cargar la página (opcional, requiere JS para una carga gradual) */
-/* body { opacity: 0; animation: fadeIn 1s forwards; }
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-} */
-
-/* Pequeña animación en los párrafos al pasar el ratón */
-p {
-    transition: color 0.2s ease;
-}
-
-p:hover {
-    color: var(--color-cafe-medio); /* Un ligero cambio de color al pasar el ratón */
-}
-
-/* Media Queries para adaptabilidad */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5em;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    .subtitle {
-        font-size: 1.2em;
-    }
-
-    .menu-item {
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-        max-width: 350px; /* Limita el ancho en caso de que la pantalla sea muy grande pero el item no debe serlo */
-    }
-
-    #gallery img {
-        width: 95%;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 40px 10px;
-    }
-
-    .logo {
-        width: 120px;
-        height: 120px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.6em;
-    }
-
-    .menu-item {
-        padding: 20px;
-    }
-
-    .menu-item p {
-        font-size: 1.5em;
-    }
-
-    #about p, #contact p {
-        font-size: 1em;
-    }
-}
+/* Tipografía decorativa opcional */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
