@@ -1,11 +1,11 @@
 /* Base y Tipografía */
 body {
     font-family: 'Georgia', serif; /* Una fuente clásica y cálida */
+    font-size: 2em; /* Tamaño base duplicado */
     margin: 0;
     line-height: 1.6;
     color: #333; /* Un color de texto oscuro pero suave */
     background-color: #f8f5ed; /* Un color de fondo crema suave */
-    font-size: 1.5em; /* Todo el texto base será 1.5 veces más grande */
 }
 
 h1, h2, h3 {
@@ -40,14 +40,14 @@ header .logo {
 }
 
 header h1 {
-    font-size: 6em; /* 4em * 1.5 = 6em */
+    font-size: 8em; /* Duplicado: antes 4em */
     margin-bottom: 5px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header .subtitle {
-    font-size: 3em; /* 2em * 1.5 = 3em */
+    font-size: 4em; /* Duplicado: antes 2em */
     font-style: italic;
     color: #f0e6d2; /* Un color más claro para el subtítulo */
 }
@@ -83,8 +83,7 @@ section {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Aumentamos el ancho del contenedor para acomodar la imagen más grande */
-    width: 400px; /* Ajusta este valor si es necesario, duplicando el ancho original de 300px */
+    width: 400px;
 }
 
 .menu-item:hover {
@@ -93,8 +92,8 @@ section {
 }
 
 .menu-item img {
-    width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
-    height: 500px; /* ¡Duplicado! Antes era 250px */
+    width: 100%;
+    height: 500px; /* Duplicado */
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -103,55 +102,14 @@ section {
 
 .menu-item p {
     font-weight: bold;
-    font-size: 2.25em; /* 1.5em * 1.5 = 2.25em */
+    font-size: 3em; /* Duplicado: antes 1.5em */
     color: #5a4b41;
-}
-
-/* ... el resto de tu CSS ... */
-
-/* Media Queries para Responsividad */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 4.5em; /* 3em * 1.5 = 4.5em */
-    }
-
-    .menu-item {
-        width: 100%;
-        max-width: 400px; /* Ajustado para el tamaño nuevo de la imagen */
-    }
-
-    .menu-item img {
-        height: 350px; /* Reduce el tamaño en móviles si 500px es demasiado grande */
-    }
-
-    #gallery img {
-        width: 80%;
-        margin: 15px auto;
-        display: block;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 4.5em; /* 3em * 1.5 = 4.5em */
-    }
-
-    section {
-        padding: 30px 15px;
-    }
-
-    .menu-item p {
-        font-size: 1.95em; /* 1.3em * 1.5 = 1.95em */
-    }
-    .menu-item img {
-        height: 250px; /* Podrías ajustarlo más para pantallas muy pequeñas */
-    }
 }
 
 /* Nuestra Historia y Horarios y Ubicación */
 #about p,
 #contact p {
-    font-size: 3em; /* 2em * 1.5 = 3em */
+    font-size: 4em; /* Duplicado: antes 2em */
     line-height: 1.8;
     color: #555;
 }
@@ -171,7 +129,7 @@ section {
 }
 
 #gallery img {
-    width: 30%; /* Ajusta el tamaño de las imágenes */
+    width: 30%;
     max-width: 350px;
     height: 250px;
     object-fit: cover;
@@ -188,23 +146,27 @@ section {
 
 /* Pie de Página */
 footer {
-    background-color: #5a4b41; /* Un color oscuro para el pie de página */
+    background-color: #5a4b41;
     color: #f0e6d2;
     text-align: center;
     padding: 25px 20px;
     margin-top: 50px;
-    font-size: 1.35em; /* 0.9em * 1.5 = 1.35em */
+    font-size: 1.8em; /* Duplicado: antes 0.9em */
 }
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 4.5em; /* 3em * 1.5 = 4.5em */
+        font-size: 6em; /* Duplicado: antes 3em */
     }
 
     .menu-item {
         width: 100%;
-        max-width: 300px; /* Asegura que no se estire demasiado en pantallas pequeñas */
+        max-width: 400px;
+    }
+
+    .menu-item img {
+        height: 350px;
     }
 
     #gallery img {
@@ -212,11 +174,15 @@ footer {
         margin: 15px auto;
         display: block;
     }
+
+    .menu-item p {
+        font-size: 3em;
+    }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 4.5em; /* 3em * 1.5 = 4.5em */
+        font-size: 6em;
     }
 
     section {
@@ -224,6 +190,10 @@ footer {
     }
 
     .menu-item p {
-        font-size: 4.5em; /* 3em * 1.5 = 4.5em */
+        font-size: 3em;
+    }
+
+    .menu-item img {
+        height: 250px;
     }
 }
