@@ -39,14 +39,14 @@ header .logo {
 }
 
 header h1 {
-    font-size: 3.5em;
+    font-size: 4em;
     margin-bottom: 5px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header .subtitle {
-    font-size: 1.2em;
+    font-size: 2em;
     font-style: italic;
     color: #f0e6d2; /* Un color más claro para el subtítulo */
 }
@@ -111,7 +111,7 @@ section {
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.5em;
+        font-size: 3em;
     }
 
     .menu-item {
@@ -132,7 +132,7 @@ section {
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 2em;
+        font-size: 3em;
     }
 
     section {
@@ -150,7 +150,7 @@ section {
 /* Nuestra Historia y Horarios y Ubicación */
 #about p,
 #contact p {
-    font-size: 1.1em;
+    font-size: 2em;
     line-height: 1.8;
     color: #555;
 }
@@ -198,7 +198,7 @@ footer {
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.5em;
+        font-size: 3em;
     }
 
     .menu-item {
@@ -215,7 +215,7 @@ footer {
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 2em;
+        font-size: 3em;
     }
 
     section {
@@ -223,6 +223,6 @@ footer {
     }
 
     .menu-item p {
-        font-size: 1.3em; /* Ajuste para móviles */
+        font-size: 3em; /* Ajuste para móviles */
     }
 }
