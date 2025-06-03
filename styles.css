@@ -1,15 +1,15 @@
 /* Base y Tipografía */
 body {
-    font-family: 'Georgia', serif; /* Una fuente clásica y cálida */
+    font-family: 'Georgia', serif;
     margin: 0;
     line-height: 1.6;
-    color: #333; /* Un color de texto oscuro pero suave */
-    background-color: #f8f5ed; /* Un color de fondo crema suave */
+    color: #333;
+    background-color: #f8f5ed;
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif; /* Una fuente elegante para los títulos */
-    color: #5a4b41; /* Un marrón oscuro para los títulos */
+    font-family: 'Playfair Display', serif;
+    color: #5a4b41;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -22,7 +22,7 @@ p {
 
 /* Encabezado */
 header {
-    background-color: #7b6a5e; /* Un tono de marrón más oscuro para el encabezado */
+    background-color: #7b6a5e;
     color: #fff;
     padding: 40px 20px;
     text-align: center;
@@ -32,10 +32,10 @@ header {
 header .logo {
     width: 120px;
     height: 120px;
-    border-radius: 50%; /* Para hacer el logo redondo */
+    border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
-    border: 3px solid #fff; /* Un borde blanco alrededor del logo */
+    border: 3px solid #fff;
 }
 
 header h1 {
@@ -48,7 +48,7 @@ header h1 {
 header .subtitle {
     font-size: 1.2em;
     font-style: italic;
-    color: #f0e6d2; /* Un color más claro para el subtítulo */
+    color: #f0e6d2;
 }
 
 /* Secciones Generales */
@@ -64,25 +64,25 @@ section {
 
 /* Menú */
 .menu h2 {
-    color: #964B00; /* Un tono de marrón más cálido para el menú */
+    color: #964B00;
 }
 
 .menu-items {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px; /* Espacio entre los elementos del menú */
+    gap: 30px;
     margin-top: 40px;
 }
 
 .menu-item {
-    background-color: #f0e6d2; /* Un fondo claro para cada item del menú */
+    background-color: #f0e6d2;
     border-radius: 8px;
     padding: 25px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px; /* Ajustado para acomodar la imagen más grande */
+    width: 300px;
 }
 
 .menu-item:hover {
@@ -91,8 +91,8 @@ section {
 }
 
 .menu-item img {
-    width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
-    height: 250px; /* Aumentamos la altura de la imagen */
+    width: 100%;
+    height: 450px; /* Aumentado 1.8 veces */
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -101,7 +101,7 @@ section {
 
 .menu-item p {
     font-weight: bold;
-    font-size: 1.5em; /* Ajustado para que el texto no sea demasiado grande y se ajuste mejor */
+    font-size: 1.95em; /* Aumentado 1.3 veces */
     color: #5a4b41;
 }
 
@@ -128,7 +128,7 @@ section {
 }
 
 #gallery img {
-    width: 30%; /* Ajusta el tamaño de las imágenes */
+    width: 30%;
     max-width: 350px;
     height: 250px;
     object-fit: cover;
@@ -145,7 +145,7 @@ section {
 
 /* Pie de Página */
 footer {
-    background-color: #5a4b41; /* Un color oscuro para el pie de página */
+    background-color: #5a4b41;
     color: #f0e6d2;
     text-align: center;
     padding: 25px 20px;
@@ -161,13 +161,21 @@ footer {
 
     .menu-item {
         width: 100%;
-        max-width: 300px; /* Asegura que no se estire demasiado en pantallas pequeñas */
+        max-width: 300px;
     }
 
     #gallery img {
         width: 80%;
         margin: 15px auto;
         display: block;
+    }
+
+    .menu-item img {
+        height: 400px; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .menu-item p {
+        font-size: 1.7em; /* Ajustado proporcionalmente */
     }
 }
 
@@ -180,7 +188,11 @@ footer {
         padding: 30px 15px;
     }
 
+    .menu-item img {
+        height: 350px; /* Más compacto en móviles */
+    }
+
     .menu-item p {
-        font-size: 1.3em; /* Ajuste para móviles */
+        font-size: 1.5em; /* Ajuste para móviles */
     }
 }
