@@ -5,6 +5,7 @@ body {
     line-height: 1.6;
     color: #333; /* Un color de texto oscuro pero suave */
     background-color: #f8f5ed; /* Un color de fondo crema suave */
+    font-size: 1.5em; /* Todo el texto base será 1.5 veces más grande */
 }
 
 h1, h2, h3 {
@@ -39,14 +40,14 @@ header .logo {
 }
 
 header h1 {
-    font-size: 4em;
+    font-size: 6em; /* 4em * 1.5 = 6em */
     margin-bottom: 5px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header .subtitle {
-    font-size: 2em;
+    font-size: 3em; /* 2em * 1.5 = 3em */
     font-style: italic;
     color: #f0e6d2; /* Un color más claro para el subtítulo */
 }
@@ -102,7 +103,7 @@ section {
 
 .menu-item p {
     font-weight: bold;
-    font-size: 1.5em; /* Ajustado para que el texto no sea demasiado grande y se ajuste mejor */
+    font-size: 2.25em; /* 1.5em * 1.5 = 2.25em */
     color: #5a4b41;
 }
 
@@ -111,7 +112,7 @@ section {
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 3em;
+        font-size: 4.5em; /* 3em * 1.5 = 4.5em */
     }
 
     .menu-item {
@@ -132,7 +133,7 @@ section {
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 3em;
+        font-size: 4.5em; /* 3em * 1.5 = 4.5em */
     }
 
     section {
@@ -140,7 +141,7 @@ section {
     }
 
     .menu-item p {
-        font-size: 1.3em; /* Ajuste para móviles */
+        font-size: 1.95em; /* 1.3em * 1.5 = 1.95em */
     }
     .menu-item img {
         height: 250px; /* Podrías ajustarlo más para pantallas muy pequeñas */
@@ -150,7 +151,7 @@ section {
 /* Nuestra Historia y Horarios y Ubicación */
 #about p,
 #contact p {
-    font-size: 2em;
+    font-size: 3em; /* 2em * 1.5 = 3em */
     line-height: 1.8;
     color: #555;
 }
@@ -192,13 +193,13 @@ footer {
     text-align: center;
     padding: 25px 20px;
     margin-top: 50px;
-    font-size: 0.9em;
+    font-size: 1.35em; /* 0.9em * 1.5 = 1.35em */
 }
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 3em;
+        font-size: 4.5em; /* 3em * 1.5 = 4.5em */
     }
 
     .menu-item {
@@ -215,7 +216,7 @@ footer {
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 3em;
+        font-size: 4.5em; /* 3em * 1.5 = 4.5em */
     }
 
     section {
@@ -223,6 +224,6 @@ footer {
     }
 
     .menu-item p {
-        font-size: 3em; /* Ajuste para móviles */
+        font-size: 4.5em; /* 3em * 1.5 = 4.5em */
     }
 }
