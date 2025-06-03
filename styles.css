@@ -1,255 +1,116 @@
-body {
-  margin: 0;
-  /* Utilizar una fuente más moderna y legible, con opciones de respaldo */
-  font-family: 'Poppins', sans-serif; 
-  scroll-behavior: smooth;
-  /* Ajustar colores para un contraste más agradable y una paleta más cohesionada */
-  background-color: #f8f0e5; /* Un beige claro y suave */
-  color: #4a3e3e; /* Un marrón oscuro para el texto principal */
-  line-height: 1.6; /* Mejorar la legibilidad del texto */
+/* styles.css */
+
+:root {
+  --primary: #5C4033;
+  --secondary: #A1866F;
+  --background: #F8F1E7;
+  --text: #2F2F2F;
+  --accent: #D9BFA9;
+  --font: 'Segoe UI', sans-serif;
 }
 
-/* Transiciones suaves para elementos interactivos */
-a, button, .menu-item img, .gallery img {
-  transition: all 0.3s ease-in-out;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 0 1rem;
 }
 
 header {
-  background: url('assets/fondo.jpg') no-repeat center center/cover;
-  height: 100vh;
+  background-color: var(--primary);
+  color: white;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  /* Añadir un ligero degradado sobre la imagen para mejorar la legibilidad del texto */
-  position: relative;
-  overflow: hidden; /* Asegurar que el pseudoelemento no se salga */
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
-  z-index: 1; /* Asegurar que el degradado esté sobre la imagen pero debajo del contenido */
+  padding: 2rem 1rem;
 }
 
 .logo {
-  width: 150px;
-  margin-bottom: 20px;
-  z-index: 2; /* Asegurar que el logo esté sobre el degradado */
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3)); /* Sombra sutil para el logo */
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
 header h1 {
-  font-size: 4.5rem; /* Ligeramente más grande */
-  margin: 0;
-  font-weight: 700; /* Usar un valor numérico para font-weight */
-  color: #ffffff;
-  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8); /* Sombra más pronunciada para el título */
-  letter-spacing: 2px; /* Espaciado entre letras para el título */
-  z-index: 2;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  font-size: 2.5rem; /* Ligeramente más grande */
-  margin-top: 15px; /* Más espacio */
   font-style: italic;
-  font-weight: 500; /* Un poco menos negrita para el subtítulo */
-  color: #f0f0f0; /* Un blanco más suave */
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada */
-  z-index: 2;
+  font-size: 1.2rem;
 }
 
 section {
-  padding: 80px 20px; /* Más padding para secciones */
-  max-width: 1200px; /* Ancho máximo un poco mayor */
-  margin: auto;
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1rem;
 }
 
 h2 {
-  font-size: 2.8rem; /* Títulos de sección más grandes */
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
   text-align: center;
-  margin-bottom: 40px; /* Más espacio debajo de los títulos */
-  color: #7b3f00; /* Un color más cálido y atractivo para los títulos */
-  position: relative;
-  padding-bottom: 10px;
-}
-
-h2::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: #a86b3a; /* Un color de acento para la línea */
-  margin: 15px auto 0;
-  border-radius: 2px;
 }
 
 .menu-items {
   display: flex;
-  gap: 40px; /* Más espacio entre los elementos del menú */
-  flex-wrap: wrap;
+  gap: 1.5rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .menu-item {
+  background-color: white;
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 200px;
   text-align: center;
-  max-width: 350px; /* Un poco más estrecho para un diseño más compacto */
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada para las tarjetas */
-  overflow: hidden; /* Asegurar que el borde redondeado se aplique a la imagen */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Espacia el contenido */
-  padding-bottom: 20px; /* Padding extra para el contenido de la tarjeta */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
 }
 
 .menu-item img {
   width: 100%;
-  height: 250px; /* Altura fija para las imágenes del menú */
-  object-fit: cover; /* Asegura que las imágenes se ajusten bien */
-  border-radius: 15px 15px 0 0; /* Solo esquinas superiores redondeadas */
-  box-shadow: none; /* Eliminar sombra duplicada */
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
 }
 
-.menu-item img:hover {
-  transform: scale(1.08); /* Mayor efecto al pasar el ratón */
+#about p,
+#contact p {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 1rem;
 }
 
-.menu-item h3 {
-  font-size: 1.6rem;
-  color: #7b3f00;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  padding: 0 15px;
+#gallery {
+  text-align: center;
 }
 
-.menu-item p {
-  font-size: 1rem;
-  color: #6a5e5e;
-  padding: 0 15px;
-  margin-bottom: 15px;
-}
-
-.menu-item .price {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #a86b3a; /* Color de acento para el precio */
-  margin-top: 15px;
-  padding: 0 15px;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px; /* Más espacio entre las imágenes de la galería */
-  margin-top: 30px; /* Más espacio arriba */
-}
-
-.gallery-item {
-  max-width: 180px; /* Un poco más grande para las imágenes de la galería */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más definida */
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.gallery img {
-  width: 100%;
-  height: 180px; /* Altura fija para las imágenes de la galería */
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: none;
-}
-
-.gallery img:hover {
-  transform: scale(1.1); /* Mayor efecto al pasar el ratón */
-  filter: brightness(1.1); /* Ligero brillo al pasar el ratón */
+#gallery img {
+  width: 300px;
+  max-width: 90%;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 footer {
   text-align: center;
-  padding: 30px; /* Más padding en el footer */
-  background-color: #3e2f2f; /* Un color de fondo más oscuro y cálido */
-  color: #e0e0e0; /* Un blanco más suave para el texto */
-  font-size: 1rem;
-  margin-top: 50px; /* Espacio superior adicional */
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-/* Responsive */
-@media (max-width: 992px) { /* Añadimos un breakpoint intermedio */
-  header h1 {
-    font-size: 3.5rem;
-  }
-
-  .subtitle {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu-item,
-  .gallery-item {
-    max-width: 90%; /* Ajuste para que ocupen más ancho en pantallas pequeñas */
-  }
-
-  .logo {
-    width: 100px; /* Logo más pequeño */
-  }
-
-  header h1 {
-    font-size: 2.8rem; /* Título más pequeño */
-  }
-
-  .subtitle {
-    font-size: 1.6rem; /* Subtítulo más pequeño */
-  }
-
-  h2 {
-    font-size: 1.8rem; /* Títulos de sección más pequeños */
-  }
-
-  section {
-    padding: 50px 15px; /* Menos padding en secciones */
-  }
-}
-
-@media (max-width: 480px) { /* Breakpoint para móviles muy pequeños */
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 25px;
-  }
-
-  .menu-item {
-    padding-bottom: 15px;
-  }
-  .menu-item img {
-    height: 200px;
-  }
-  .gallery img {
-    height: 150px;
-  }
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  margin-top: 3rem;
 }
