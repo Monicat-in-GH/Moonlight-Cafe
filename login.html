@@ -6,19 +6,7 @@
     <title>Iniciar Sesión - Moonlight Cafe</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            background-color: #f4f1ee; 
-            margin: 0; 
-        }
-        header { 
-            text-align: center; 
-            padding: 20px; 
-        }
-        .logo { 
-            max-width: 100px; 
-            border-radius: 50%; 
-        }
+        
         .form-container {
             max-width: 500px;
             margin: 50px auto;
@@ -72,11 +60,14 @@
             text-decoration: none;
             font-weight: bold;
         }
-        footer { 
-            text-align: center; 
-            padding: 20px; 
-            font-size: 0.8em; 
+        .form-container p a:hover {
+            text-decoration: underline;
         }
+        
+        body { font-family: Arial, sans-serif; background-color: #f4f1ee; margin: 0; }
+        header { text-align: center; padding: 20px; }
+        footer { text-align: center; padding: 20px; font-size: 0.8em; }
+        .logo { max-width: 100px; border-radius: 50%; }
     </style>
 </head>
 <body>
@@ -89,4 +80,21 @@
     <div class="form-container">
         <h2>Iniciar Sesión</h2>
 
-        <form action="index.html" method="GET">
+        <form action="dashboard.html" method="GET">
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        
+        <p>¿No tienes una cuenta? <a href="register.html">Regístrate aquí</a></p>
+    </div>
+
+    <footer>
+        <p>© 2025 Moonlight Cafe. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
