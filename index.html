@@ -43,16 +43,8 @@
         <p class="subtitle">En donde cada momento es único</p>
 
         <div class="auth-links" 
-            <?php
-            session_start(); // Inicia la sesión si no se ha iniciado
-            if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
-                <span>Hola, <?php echo htmlspecialchars($_SESSION['username']); ?>!</span>
-                <a href="dashboard.php">Mi Cuenta</a>
-                <a href="logout.php" class="logout-button">Cerrar Sesión</a>
-            <?php else: ?>
-                <a href="login.php">Iniciar Sesión</a>
-                <a href="register.php">Registrarse</a>
-            <?php endif; ?>
+            <a href="login.html">Iniciar Sesión</a>
+            <a href="register.html">Registrarse</a>
         </div>
     </header>
 
@@ -96,6 +88,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
