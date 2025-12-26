@@ -6,25 +6,7 @@
     <title>Iniciar Sesión - Moonlight Cafe</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f1ee;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #fdfcfb;
-        }
-        .logo {
-            max-width: 120px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-        h1 { color: #5a4b41; margin: 0; }
-        .subtitle { color: #8d7a6d; font-style: italic; }
-
+        
         .form-container {
             max-width: 500px;
             margin: 50px auto;
@@ -63,22 +45,11 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1.1em;
-            width: 100%;
             transition: background-color 0.3s ease;
+            width: 100%;
         }
         .form-container button:hover {
             background-color: #7b3d00;
-        }
-        
-        #message-box {
-            display: none; 
-            margin-bottom: 20px;
-            padding: 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
         }
         .form-container p {
             margin-top: 20px;
@@ -92,16 +63,14 @@
         .form-container p a:hover {
             text-decoration: underline;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #8d7a6d;
-            font-size: 0.9em;
-        }
+        
+        body { font-family: Arial, sans-serif; background-color: #f4f1ee; margin: 0; }
+        header { text-align: center; padding: 20px; }
+        footer { text-align: center; padding: 20px; font-size: 0.8em; }
+        .logo { max-width: 100px; border-radius: 50%; }
     </style>
 </head>
 <body>
-
     <header>
         <img src="assets/Logo.jpg" alt="Logo Moonlight Cafe" class="logo" />
         <h1>Moonlight Cafe</h1>
@@ -110,45 +79,22 @@
 
     <div class="form-container">
         <h2>Iniciar Sesión</h2>
-        
-        <div id="message-box"></div>
 
-        <form id="loginForm">
+        <form action="dashboard.html" method="GET">
             <label for="username">Nombre de Usuario:</label>
-            <input type="text" id="username" name="username" placeholder="Tu usuario" required>
+            <input type="text" id="username" name="username" required>
 
             <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" placeholder="••••••••" required>
+            <input type="password" id="password" name="password" required>
 
             <button type="submit">Iniciar Sesión</button>
         </form>
-
+        
         <p>¿No tienes una cuenta? <a href="register.html">Regístrate aquí</a></p>
     </div>
 
     <footer>
         <p>© 2025 Moonlight Cafe. Todos los derechos reservados.</p>
     </footer>
-
-    <script>
-        
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const user = document.getElementById('username').value;
-            const pass = document.getElementById('password').value;
-            const messageBox = document.getElementById('message-box');
-
-            if (user === "" || pass === "") {
-                messageBox.style.display = "block";
-                messageBox.innerText = "Por favor, completa todos los campos.";
-            } else {
-                
-                alert("Simulación: ¡Inicio de sesión exitoso para " + user + "!");
-                
-            }
-        });
-    </script>
 </body>
 </html>
-
