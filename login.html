@@ -69,9 +69,9 @@
         .form-container button:hover {
             background-color: #7b3d00;
         }
-        /* Contenedor para mensajes de error simulados */
+        
         #message-box {
-            display: none; /* Oculto por defecto */
+            display: none; 
             margin-bottom: 20px;
             padding: 10px;
             border-radius: 5px;
@@ -131,9 +131,9 @@
     </footer>
 
     <script>
-        // Simulación de lógica de login para la maqueta
+        
         document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita que la página se recargue
+            e.preventDefault();
             
             const user = document.getElementById('username').value;
             const pass = document.getElementById('password').value;
@@ -143,12 +143,12 @@
                 messageBox.style.display = "block";
                 messageBox.innerText = "Por favor, completa todos los campos.";
             } else {
-                // Simulación de éxito
+                
                 alert("Simulación: ¡Inicio de sesión exitoso para " + user + "!");
-                // Aquí podrías redirigir manualmente si fuera una maqueta multipágina:
-                // window.location.href = "dashboard.html";
+                
             }
         });
     </script>
 </body>
 </html>
+
