@@ -1,9 +1,8 @@
 <?php
-// dashboard.php
 session_start();
 
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: login.php"); 
+    header("Location: login.html"); 
     exit();
 }
 ?>
@@ -58,7 +57,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <div class="welcome-container">
         <h2>¡Bienvenido!</h2>
         <p>Has iniciado sesión exitosamente en Moonlight Cafe. Aquí puedes acceder a contenido exclusivo o gestionar tu perfil.</p>
-        <a href="logout.php">Cerrar Sesión</a>
+        <a href="logout.html">Cerrar Sesión</a>
     </div>
 
     <footer>
@@ -66,4 +65,5 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </footer>
 </body>
 </html>
+
 
