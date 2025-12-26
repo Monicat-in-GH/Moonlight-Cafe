@@ -42,17 +42,12 @@
         <h1>Moonlight Cafe</h1>
         <p class="subtitle">En donde cada momento es único</p>
 
-        <div class="auth-links">
-            <?php
-            session_start(); // Inicia la sesión si no se ha iniciado
-            if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
-                <span>Hola, <?php echo htmlspecialchars($_SESSION['username']); ?>!</span>
-                <a href="dashboard.php">Mi Cuenta</a>
-                <a href="logout.php" class="logout-button">Cerrar Sesión</a>
-            <?php else: ?>
-                <a href="login.php">Iniciar Sesión</a>
-                <a href="register.php">Registrarse</a>
-            <?php endif; ?>
+        <div class="auth-links" style="color: white;">
+            <span style="color: white;">Hola, Usuario!</span>
+            <a href="dashboard.html" style="color: white;">Mi Cuenta</a>
+            <a href="logout.html" class="logout-button" style="color: white;">Cerrar Sesión</a>
+            <a href="login.html" style="color: white;">Iniciar Sesión</a>
+            <a href="register.html" style="color: white;">Registrarse</a>
         </div>
     </header>
 
@@ -96,5 +91,6 @@
     </footer>
 </body>
 </html>
+
 
 
