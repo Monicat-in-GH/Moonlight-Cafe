@@ -3,40 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cerrando sesión...</title>
+    <title>Cerrando Sesión</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f9;
             margin: 0;
+            background-color: #f0f2f5;
         }
-        .loader-container {
-            text-align: center;
+        .card {
             background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
         }
         .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3498db;
+            border: 4px solid rgba(0,0,0,0.1);
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
+            border-left-color: #09f;
+            animation: spin 1s ease infinite;
+            margin: 0 auto 15px;
         }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h2 { color: #333; margin-bottom: 10px; }
+        p { color: #666; }
     </style>
+
+    <meta http-equiv="refresh" content="2;url=index.html">
 </head>
 <body>
-    <div class="loader-container">
+
+    <div class="card">
         <div class="spinner"></div>
-        <p>Finalizando tu sesión de forma segura...</p>
+        <h2>Cerrando sesión</h2>
+        <p>Esperamos verte pronto. Redirigiendo a la página de inicio...</p>
     </div>
+
+    <script>
+        // Este script asegura que al entrar a esta página, 
+        // después de 1.5 segundos te mande al inicio.
+        setTimeout(function() {
+            window.location.href = "index.html"; 
+        }, 1500);
+    </script>
+
 </body>
 </html>
